@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+
+  "name": "wstash",
+  "description": "Allows you to save window states so that you can reopen them later.",
+  "version": "1.0",
+  "commands": {
+    "save-window-state": {
+      "suggested-key": {
+        "default": "Ctrl+s",
+        "mac": "Command+s"
+      },
+      "description": "save the tab state of the current window"
+    } 
+  },
+  "content_scripts": [
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "options_page": "options.html",
+  "browser_action": {
+    "default_icon": "tabs.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs",
+    "storage"
+  ]
+}
